@@ -2,7 +2,6 @@
 
 body {
     font-family: 'Asap', sans-serif;
-    text-align: center;
 }
 
 /* ------------------- Navbar Styling ------------------- */
@@ -48,6 +47,31 @@ footer {
     background-color: #333;
 }
 
+/* ------------------- Heading Styling ------------------- */
+
+h1 > span.glyphicon {
+    margin-right: 8px;
+    vertical-align: top;
+}
+section#about-me h1:first-child {
+    margin-top: 0px;
+}
+section#my-reflections h1:first-child {
+    margin-bottom: 24px;
+}
+
+/* ------------------- Responsive Image Styling ------------------- */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* ------------------- Portfolio Navigation Styling ------------------- */
 
 nav#portfolio {
@@ -69,7 +93,15 @@ nav#portfolio {
     color: #000;
 }
 
-/* Project Reflection */
+/* ------------------- Avatar Styling ------------------- */
+
+#avatar {
+    margin: 0 auto;
+    max-width: 260px;
+    display: block;
+}
+
+/* ------------------- Project Reflection Styling ------------------- */
 
 .project-title {
     font-weight: bold;
@@ -81,17 +113,8 @@ nav#portfolio {
 #my-reflections div.row .col-md-4 {
     padding-bottom: 20px;
 }
-
-/* ------------------- Responsive Image Styling ------------------- */
-
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-    display: block;
-    width: 100%;
-    height: auto;
+#my-reflections div.row {
+    padding: 0 15px;
 }
 
 /* ------------------- Carousel Styling ------------------- */
@@ -109,6 +132,7 @@ nav#portfolio {
     padding: 0 0 10px 25px;
     color: #fff;
     text-align: left;
+    font-size: 2rem;
 }
 .carousel-indicators {
     position: absolute;
@@ -118,7 +142,7 @@ nav#portfolio {
     width: 100%;
     z-index: 15;
     margin: 0;
-    padding: 0 25px 25px 0;
+    padding: 0 8px 3px 0;
     text-align: right;
 }
 .carousel-control.left,
@@ -126,23 +150,21 @@ nav#portfolio {
     background-image: none;
 }
 
-/* ------------------- Avatar Styling ------------------- */
-
-#avatar {
-    margin: 0 auto;
-    max-width: 300px;
-}
-
 /* ------------------- Media Queries ------------------- */
 
+@media (min-width: 544px) {
+    #avatar {
+        display: inline;
+        max-width: 396px;
+    }
+}
 @media (min-width: 768px) {
     body {
         text-align: left;
     }
     #avatar {
+        display: inline;
         max-width: 100%;
-        height: auto;
-        margin-right: 30px;
     }
 }
 @media (min-width: 992px) {
