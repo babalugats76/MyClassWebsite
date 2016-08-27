@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1">
+    <title>Rubik&rsquo;s Cube Madness</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto';
+        }
+        
+        html {
+            font-size: 16px;
+        }
+        
+        #content {
+            max-width: 600px;
+            padding: 10px;
+            margin: 1rem auto;
+            background-color: white;
+        }
+        
+        #header {
+            padding: 10px 0;
+        }
+        
+        #footer {
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+            clear: both;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 0.5rem 0;
+            font-size: 3rem;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #rubik {
+            text-align: center;
+            padding: 20px 10px;
+        }
+        
+        .row {
+            display: block;
+            font-size: 0;
+        }
+        
+        .tile {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            font-size: 0;
+            border: 5px inset black;
+        }
+        
+        ul {
+            list-style-position: inside;
+        }
+        
+        li {
+            padding: 10px;
+        }
+        
+        .green {
+            background-color: #00D100;
+        }
+        
+        .white {
+            background-color: #FFFFFF;
+        }
+        
+        .blue {
+            background-color: #2A32FF;
+        }
+        
+        .red {
+            background-color: #FF1212;
+        }
+        
+        .orange {
+            background-color: #FF9000;
+        }
+        
+        .yellow {
+            background-color: #FFFF00;
+        }
+        
+        @media screen and (min-width: 768px) {
+            html {
+                font-size: 20px;
+            }
+            #left {
+                max-width: 300px;
+                float: left;
+            }
+            #right {
+                float: right;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <h1><a href="http://www.rubiks.com" target="_blank" title="Visit the Official Website">Rubik&rsquo;s Cube</a></h1>
+        </div>
+        <div id="left">
+            <h2>Did You Know?</h2>
+            <ul>
+                <li>Erno Rubik, inventor of the Cube, originally didn&rsquo;t want the puzzle to be solvable</li>
+                <li>The Cube was reinvented in 2003, including faster action mechanisms and tougher tiles</li>
+                <li>The largest working Rubik&rsquo;s Cube is 17x17x17 constructed by Oskar van Deventer of the Netherlands</li>
+            </ul>
+        </div>
+        <div id="right">
+            <div id="rubik">
+                <div class="row">
+                    <div id="row">
+                        <div id="top-left" class="tile green"></div>
+                        <div id="top-center" class="tile yellow"></div>
+                        <div id="top-right" class="tile white"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="row">
+                        <div id="middle-left" class="tile red"></div>
+                        <div id="middle-center" class="tile orange"></div>
+                        <div id="middle-right" class="tile blue"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="row">
+                        <div id="bottom-left" class="tile yellow"></div>
+                        <div id="bottom-center" class="tile white"></div>
+                        <div id="bottom-right" class="tile green"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>The World&rsquo;s Top-Selling Puzzle Game!</p>
+        </div>
+    </div>
+</body>
+
+</html>

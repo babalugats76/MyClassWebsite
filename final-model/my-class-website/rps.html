@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1">
+    <title>Rock, Paper, Scissors</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <style>
+
+    * {
+        font-family: 'Raleway';
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    body {
+        background-color: #2b2b2b;
+    }
+
+    #game {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    #play-game {
+        width: 200px;
+        height: 75px;
+        border-radius: 10px;
+        margin: 0 auto 10px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+        	
+    #player, #computer {
+        color: white;
+        font-weight: bold;
+    }
+    
+    #result {
+        color: red;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+</style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+</script>
+    <script>
+    $(document).ready(function() {
+        $("#play-game").click(function() {
+            var choices = ["rock", "paper", "scissors"];
+            var player = prompt("Choose rock, paper, or scissors");
+            var computer = choices[Math.floor(Math.random() * 3)];
+            var result;
+            if (player === computer) {
+                result = "Tie.  Play again!";
+            } else if (player === "rock" && computer === "scissors") {
+                result = "You win!";
+            } else if (player === "paper" && computer === "rock") {
+                result = "You win!";
+            } else if (player === "scissors" && computer === "paper") {
+                result = "You win!";
+            } else {
+                result = "Computer wins!  You lose!";
+            }
+            $("#player").text("You chose: " + player);
+            $("#computer").text("The computer chose: " + computer);
+            $("#result").text(result);
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div id="game">
+        <img src="http://static.colestock.com/images/rock-paper-scissors.jpg" width="300" alt="Rock, Paper, Scissors">
+        <button id="play-game">Play Game</button>
+        <div id="player"></div>
+        <div id="computer"></div>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>
